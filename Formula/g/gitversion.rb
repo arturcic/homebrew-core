@@ -16,10 +16,10 @@ class Gitversion < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "145cf97b7cf3542f18a5cb1bde69518a090672cdefef3c6681ce4f5415934c6e"
   end
 
-  depends_on "dotnet@6"
+  depends_on "dotnet"
 
   def install
-    dotnet = Formula["dotnet@6"]
+    dotnet = Formula["dotnet"]
     os = OS.mac? ? "osx" : OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
 
@@ -32,7 +32,6 @@ class Gitversion < Formula
       -p:PublishSingleFile=true
       -p:Version=#{version}
     ]
-    args << "-p:OsxArm64=true" if OS.mac? && Hardware::CPU.arm?
 
     system "dotnet", "publish", "src/GitVersion.App/GitVersion.App.csproj", *args
     env = { DOTNET_ROOT: "${DOTNET_ROOT:-#{dotnet.opt_libexec}}" }
@@ -49,6 +48,6 @@ class Gitversion < Formula
     system "git", "config", "user.email", "test@example.com"
     system "git", "add", "test.txt"
     system "git", "commit", "-q", "--message='Test'"
-    assert_match '"FullSemVer": "0.1.0+0"', shell_output("#{bin}/gitversion -output json")
+    assert_match '"FullSemVer": "0.0.1-1"', shell_output("#{bin}/gitversion -output json")
   end
 end
