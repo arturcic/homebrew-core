@@ -2,8 +2,8 @@ class Gitversion < Formula
   desc "Easy semantic versioning for projects using Git"
   homepage "https://gitversion.net"
   # TODO: Switch `dotnet@6` to `dotnet` with v6 release
-  url "https://github.com/GitTools/GitVersion/archive/refs/tags/5.12.0.tar.gz"
-  sha256 "fe2ecbd2d63a4458f19eb9f0ee6853b5041e8b2f6d7c75b0fa606be2d1a81476"
+  url "https://github.com/GitTools/GitVersion/archive/refs/tags/6.0.0-rc.2.tar.gz"
+  sha256 "96952c1523545de37a4f4b2857f87a4d5c89157066ced02b1e5ff58d81b5e34b"
   license "MIT"
 
   bottle do
