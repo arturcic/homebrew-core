@@ -1,18 +1,18 @@
 class Jackett < Formula
   desc "API Support for your favorite torrent trackers"
   homepage "https://github.com/Jackett/Jackett"
-  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.22.698.tar.gz"
-  sha256 "701fa800b66f94a0f71eedfe8756806459765ea4449030a7b02b4e0ac313b030"
+  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.22.756.tar.gz"
+  sha256 "fbeeae014e94e280af15836dff8f483a0a9d8005294363c12a5fedced0ea6b6e"
   license "GPL-2.0-only"
   head "https://github.com/Jackett/Jackett.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "dbfa7a043061046d14fc70a8ffe69ce4d731608ad58b375665c846b056b8b9cc"
-    sha256 cellar: :any,                 arm64_sonoma:  "c2aef1c60d48ad2972af404e20e690d3d89957b6c5c5db1eb92ef61b957c7ccd"
-    sha256 cellar: :any,                 arm64_ventura: "d79855c1718d126ceb89d4bb3ba5762f2bce1a3f69622d355217d1a4750d782e"
-    sha256 cellar: :any,                 sonoma:        "281c7afb2e133e81bb8566f01beecef470c65a5fb1832db239fbdab85c4325e3"
-    sha256 cellar: :any,                 ventura:       "470632e61613d369253412bb641446f583bb18140597505584ea355591def9d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "328f5bc4db7aa7e03c72d07be364b0fdd0f1f6f4ed4ecef29fa3a35a42c049f3"
+    sha256 cellar: :any,                 arm64_sequoia: "47ffd1d67ef74141a7ba5898fdc88d83316c76ef036fdd489040856caca85447"
+    sha256 cellar: :any,                 arm64_sonoma:  "749f90e7924f1f803711e49ddb57bd00890c5ba2ead3215618ab5b5880ab72c3"
+    sha256 cellar: :any,                 arm64_ventura: "3c9127696ff60bcf45fc8cf48d8c935cd79101eac2d1e519a0b97973ba149748"
+    sha256 cellar: :any,                 sonoma:        "d1580983b6173251d2554b0ffe224409dc5ae164a120e4ed88aee48c73ec78c7"
+    sha256 cellar: :any,                 ventura:       "92d02d560b79ec77c34ade330d6f81141b1a221c7cc3dc0413b7afb87c5e70dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6b599a699d7c3455008c3f02a6396040b2182ec0095e929b5629a0021df13179"
   end
 
   depends_on "dotnet"

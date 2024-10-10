@@ -1,18 +1,18 @@
 class Deadfinder < Formula
   desc "Finds broken links"
   homepage "https://rubygems.org/gems/deadfinder"
-  url "https://github.com/hahwul/deadfinder/archive/refs/tags/1.3.6.tar.gz"
-  sha256 "c632186a0295165f2a78bd0c337398cb8a6b38b4769f53e729d023fe0782fd24"
+  url "https://github.com/hahwul/deadfinder/archive/refs/tags/1.4.4.tar.gz"
+  sha256 "65be55ddea901827b033b5b9c94edb8ceba5c83f70af38e99f340d4239c902d6"
   license "MIT"
   head "https://github.com/hahwul/deadfinder.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "1b12c98f98e43bc5670d5cbe8c6e9188af83a1777b095a0adb00734762e983ed"
-    sha256 cellar: :any,                 arm64_sonoma:  "a3dfd68e54e394277e9ac963be5a313137cf470a5711fcd935d3c4f1aaffa1d3"
-    sha256 cellar: :any,                 arm64_ventura: "e740e77e993a4b7b93b99d901926b84ee02880e186567f300cd853067756b52b"
-    sha256 cellar: :any,                 sonoma:        "a5307ca046e3aa322e03980a355320734a9b5ccd39d91e32cdf84549474b52ea"
-    sha256 cellar: :any,                 ventura:       "1990dec47895f02e98c70a1f6ffc1dec971609db04fdec9328848d1133f5493a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb0f6eef47357ba07619bbe153467deb920d3b3e4847c9eef242f56f7baaecfc"
+    sha256 cellar: :any,                 arm64_sequoia: "85435034ec7c61873c5ce16758d97d5f006d14d7293b6b1d675c3c0b7097b59e"
+    sha256 cellar: :any,                 arm64_sonoma:  "e5f626e7d3b0dd45139a4ee5bb5b28373c1afb970a6cd6a9f911559ee5b52eab"
+    sha256 cellar: :any,                 arm64_ventura: "a5e6d89f92472c86095c31e191d6015c59e8a7bda91a1d50ca1747c6d0236042"
+    sha256 cellar: :any,                 sonoma:        "2debc32e465180735991d140398a510c1dec980533bcfa6e3858f32325487ba0"
+    sha256 cellar: :any,                 ventura:       "547df6f7924cfb7b4071fd481993460b26890eacc9e9e37b7aa84b86ed7944c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "532eb37efcd65401cdc221972b3e25cf648aae3c0b3b1c9cff6a231b1fe1329e"
   end
 
   depends_on "ruby"

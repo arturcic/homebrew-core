@@ -1,8 +1,8 @@
 class Flang < Formula
   desc "LLVM Fortran Frontend"
   homepage "https://flang.llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.0/llvm-project-19.1.0.src.tar.xz"
-  sha256 "5042522b49945bc560ff9206f25fb87980a9b89b914193ca00d961511ff0673c"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.1/llvm-project-19.1.1.src.tar.xz"
+  sha256 "d40e933e2a208ee142898f85d886423a217e991abbcd42dd8211f507c93e1266"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/llvm/llvm-project.git", branch: "main"
@@ -13,27 +13,26 @@ class Flang < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "48c32f1d7bfe4fc9f793b51b139b87060230ee31a30908bae9e0670d9b580a21"
-    sha256 cellar: :any,                 arm64_sonoma:  "c791ae601e361b2a4073238ad07b19e4ab188ddfc37e82f95adb05ab0085b4e8"
-    sha256 cellar: :any,                 arm64_ventura: "ed73d7e80372c6a9867d961aac012f4a1de50418cb170a9bbff6cfb48b2ece6a"
-    sha256 cellar: :any,                 sonoma:        "fa68872e1fa3661da7cf68ab7b9094cfe2b8c751ef189172a2b15359c3b26abc"
-    sha256 cellar: :any,                 ventura:       "a497d4a231bbd6426657a4e6d5b64e8840b42c5bdba8b8d47cc7accdfe300e77"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "865098e0774cbe9b78399747b9949cb5522912649517f54f6bad4f03c31b9482"
+    sha256 cellar: :any,                 arm64_sequoia: "43f998f47d3d630e4608e623c940e2da55f2d17001c3bc1b31d35a5d777508c1"
+    sha256 cellar: :any,                 arm64_sonoma:  "e3455791e65ee7cade86f560d8cf9fe5be72f39e6a57bc89954d968082c9796c"
+    sha256 cellar: :any,                 arm64_ventura: "0a2d563c57363556e7ab2b1eb56962a89fe6687e719d94a6d49254f70f4aa2e3"
+    sha256 cellar: :any,                 sonoma:        "e7bd66f9fdc25ec2199b150faecbbbe8ab6f1d7215e8c10bc474b9951d541f3d"
+    sha256 cellar: :any,                 ventura:       "8b46e1b73bb5beee405c7230168018f710a40d58917fa63ce2e2fd486cceca5b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9c25452be8cfc8925a34d8725cd7bfc96d74b5b190f3edc1b2e3887d970d1649"
   end
 
   depends_on "cmake" => :build
   depends_on "llvm"
-  depends_on "zstd"
-  uses_from_macos "zlib"
-
-  def llvm
-    Formula["llvm"]
-  end
 
   # Building with GCC fails at linking with an obscure error.
   fails_with :gcc
 
+  def flang_driver
+    "flang-new"
+  end
+
   def install
+    llvm = Formula["llvm"]
     # NOTE: Setting `BUILD_SHARED_LIBRARIES=ON` causes the just-built flang to throw ICE.
     args = %W[
       -DCLANG_DIR=#{llvm.opt_lib}/cmake/clang
@@ -50,12 +49,25 @@ class Flang < Formula
     args << "-DFLANG_VENDOR_UTI=sh.brew.flang" if tap&.official?
 
     ENV.append_to_cflags "-ffat-lto-objects" if OS.linux? # Unsupported on macOS.
-    install_prefix = OS.mac? ? libexec : prefix
+    install_prefix = libexec
     system "cmake", "-S", "flang", "-B", "build", *args, *std_cmake_args(install_prefix:)
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    return if install_prefix == prefix
+    libexec.find do |pn|
+      next if pn.directory?
+
+      subdir = pn.relative_path_from(libexec).dirname
+      (prefix/subdir).install_symlink pn
+    end
+
+    # Our LLVM is built with exception-handling, which requires linkage with the C++ standard library.
+    # TODO: Remove this if/when we've rebuilt LLVM with `LLVM_ENABLE_EH=OFF`.
+    cxx_stdlib = OS.mac? ? "-lc++" : "-lstdc++"
+    cxx_stdlib << "\n"
+    (libexec/"bin/flang.cfg").atomic_write cxx_stdlib
+
+    return if OS.linux?
 
     # Convert LTO-generated bitcode in our static archives to MachO.
     # Not needed on Linux because of `-ffat-lto-objects`
@@ -78,17 +90,17 @@ class Flang < Formula
       end
     end
 
-    libexec.find do |pn|
-      next if pn.directory?
-
-      subdir = pn.relative_path_from(libexec).dirname
-      (prefix/subdir).install_symlink pn
-    end
-
     # The `flang-new` driver expects `libLTO.dylib` to be in the same prefix,
     # but it actually lives in LLVM's prefix.
-    liblto = Formula["llvm"].opt_lib/shared_library("libLTO")
-    ln_sf liblto, libexec/"lib"
+    ln_sf Formula["llvm"].opt_lib/shared_library("libLTO"), install_prefix/"lib"
+  end
+
+  def caveats
+    <<~EOS
+      Homebrew LLVM is built with LLVM_ENABLE_EH=ON, so binaries built by `#{flang_driver}`
+      require linkage to the C++ standard library. `#{flang_driver}` is configured to do this
+      automatically.
+    EOS
   end
 
   test do
@@ -110,12 +122,10 @@ class Flang < Formula
       end
     FORTRAN
 
-    cxx_stdlib = OS.mac? ? "-lc++" : "-lstdc++"
-
-    system bin/"flang-new", "-v", "hello.f90", cxx_stdlib, "-o", "hello"
+    system bin/flang_driver, "-v", "hello.f90", "-o", "hello"
     assert_equal "Hello World!", shell_output("./hello").chomp
 
-    system bin/"flang-new", "-v", "test.f90", cxx_stdlib, "-o", "test"
+    system bin/flang_driver, "-v", "test.f90", "-o", "test"
     assert_equal "Done", shell_output("./test").chomp
 
     system "ar", "x", lib/"libFortranCommon.a"

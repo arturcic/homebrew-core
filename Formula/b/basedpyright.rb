@@ -1,18 +1,18 @@
 class Basedpyright < Formula
   desc "Pyright fork with various improvements and built-in pylance features"
   homepage "https://github.com/DetachHead/basedpyright"
-  url "https://registry.npmjs.org/basedpyright/-/basedpyright-1.18.2.tgz"
-  sha256 "8923243dfc0b9e0a78ac8aba7760dba6dac68d3f3f68bfb65a78d1e48b904702"
+  url "https://registry.npmjs.org/basedpyright/-/basedpyright-1.18.4.tgz"
+  sha256 "5ebf579f26f41c178bc45ebb4a7f6866aa0b71306b7676212e57a72d4ee9bbba"
   license "MIT"
   head "https://github.com/detachhead/basedpyright.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "79a072ceba1fad3eac23673d640d51413848b6014e71d234887c1224e6dee974"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "79a072ceba1fad3eac23673d640d51413848b6014e71d234887c1224e6dee974"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "79a072ceba1fad3eac23673d640d51413848b6014e71d234887c1224e6dee974"
-    sha256 cellar: :any_skip_relocation, sonoma:        "fe67b2c3f67474c42ae496fa8159571c29189b405bc8156af3f16ec7994279c5"
-    sha256 cellar: :any_skip_relocation, ventura:       "fe67b2c3f67474c42ae496fa8159571c29189b405bc8156af3f16ec7994279c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79a072ceba1fad3eac23673d640d51413848b6014e71d234887c1224e6dee974"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ab91beba27f1adb1682999aab4a84fd3889e0b206301dd495de0cbafe7164f40"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ab91beba27f1adb1682999aab4a84fd3889e0b206301dd495de0cbafe7164f40"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "ab91beba27f1adb1682999aab4a84fd3889e0b206301dd495de0cbafe7164f40"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c2fb05d6be64702455bcc263f17ad319eccf149d0d51421f9a0ed59b96cb5ee4"
+    sha256 cellar: :any_skip_relocation, ventura:       "c2fb05d6be64702455bcc263f17ad319eccf149d0d51421f9a0ed59b96cb5ee4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab91beba27f1adb1682999aab4a84fd3889e0b206301dd495de0cbafe7164f40"
   end
 
   depends_on "node"

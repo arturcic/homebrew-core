@@ -79,7 +79,7 @@
   },
   "awscli": {
     "exclude_packages": ["cryptography"],
-    "extra_packages": ["flit-core", "setuptools", "wheel"]
+    "extra_packages": ["flit-core"]
   },
   "awscurl": {
     "exclude_packages": ["certifi", "cryptography"]
@@ -366,6 +366,9 @@
   "gptline": {
     "exclude_packages": ["certifi", "pillow"]
   },
+  "gptme": {
+    "exclude_packages": ["certifi"]
+  },
   "graph-tool": {
     "package_name": "",
     "exclude_packages": ["numpy", "pillow"],
@@ -553,10 +556,11 @@
   },
   "openstackclient": {
     "extra_packages": [
-      "osc-placement", "python-barbicanclient", "python-cloudkittyclient",
-      "python-designateclient", "python-glanceclient", "python-heatclient",
-      "python-ironicclient", "python-magnumclient", "python-manilaclient",
-      "python-mistralclient", "python-octaviaclient", "setuptools"
+      "keystoneauth-websso", "osc-placement", "python-barbicanclient",
+      "python-cloudkittyclient", "python-designateclient",
+      "python-glanceclient", "python-heatclient", "python-ironicclient",
+      "python-magnumclient", "python-manilaclient", "python-mistralclient",
+      "python-octaviaclient", "setuptools"
     ],
     "exclude_packages": ["certifi", "cryptography"]
   },
@@ -616,7 +620,7 @@
   },
   "pydocstyle": "pydocstyle[toml]",
   "pygit2": {
-    "exclude_packages": ["cffi", "pycparser", "setuptools"]
+    "exclude_packages": ["cffi", "pycparser"]
   },
   "pyinstaller": {
     "extra_packages": ["macholib"]
@@ -662,6 +666,10 @@
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
   },
   "python@3.12": {
+    "package_name": "",
+    "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
+  },
+  "python@3.13": {
     "package_name": "",
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
   },

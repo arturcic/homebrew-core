@@ -1,17 +1,17 @@
 class CargoMake < Formula
   desc "Rust task runner and build tool"
   homepage "https://github.com/sagiegurari/cargo-make"
-  url "https://github.com/sagiegurari/cargo-make/archive/refs/tags/0.37.18.tar.gz"
-  sha256 "1aab617a63ebae03dd4c979cd884c31a7afa7a62adefaa95ebc214d23bbb888f"
+  url "https://github.com/sagiegurari/cargo-make/archive/refs/tags/0.37.21.tar.gz"
+  sha256 "08c3674d6a55015a388b49d3852e81464f4ca544400a37ab7b3752195fc503f4"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fcd26756d93914b76c0e65b79f8926e65d65b9272bf405e64c113797f9f0e707"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b4074bb88e11de9157fe3955ee2d3284f38ac6169c108544d52d706e89d86927"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "2449edb81ecc0493d0e2bea4fd04b5489b35517681db5cf60d67debb0d443eb3"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d159e621d83f007907e18a58582ef5aefdf2698713ea895f7dca67dc7d90a360"
-    sha256 cellar: :any_skip_relocation, ventura:       "e45cfac4b60962177b5bea6458919e87e26be265e4a4c7b4c5de8c3051614abe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "509b8b202e2b592d077f0669df5c4dfb02bdcf2a57a08c4071e46f7dd66b5fb1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e48fe3c7c121f658f7181815ffd63ab41a3bad28d95b6141945c7201763e4cb1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "eb0d6f9519a07e8bcd2150a83a62ff225748d30b196441aaa81e97decba5c2c4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "0fdc0462ed5d1a58ebc9cffaf323a5f63d6021fc8f050131afb0d128c92e7842"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d626e92d2a98ed61a3f57ab1d76f1238d114f3c3abf9f968bbc2ea4d241cc549"
+    sha256 cellar: :any_skip_relocation, ventura:       "7c287a9a531d3f389fb4fd429276dcc1d929c39f540207aa9cbbc2bc2cb593ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a3f0f615238eadb961a08f213d3c32234d770ad34a9212a74273ca4543083fd"
   end
 
   depends_on "rust" => :build
