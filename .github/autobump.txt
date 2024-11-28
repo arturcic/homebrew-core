@@ -33,6 +33,7 @@ akamai
 alda
 alembic
 algol68g
+aliae
 aliddns
 aliyun-cli
 aliyunpan
@@ -342,6 +343,7 @@ cargo-make
 cargo-nextest
 cargo-outdated
 cargo-release
+cargo-run-bin
 cargo-udeps
 cargo-watch
 cargo-zigbuild
@@ -603,7 +605,6 @@ czg
 czkawka
 d2
 daemon
-dafny
 dagger
 daktilo
 daq
@@ -725,6 +726,7 @@ dpp
 dprint
 dra
 draco
+draft
 drafter
 dragonbox
 driftctl
@@ -748,6 +750,7 @@ duckdb
 duckscript
 dufs
 dug
+dum
 dumpling
 dunamai
 dune
@@ -985,6 +988,7 @@ fuc
 fuego-firestore
 func-e
 functionalplus
+funzzy
 fuse-overlayfs
 fuseki
 futhark
@@ -1473,6 +1477,7 @@ kor
 kotlin
 kotlin-language-server
 kpcli
+kraftkit
 krakend
 krb5
 krew
@@ -1759,6 +1764,7 @@ litmusctl
 little-cms2
 livekit
 livekit-cli
+lla
 llama.cpp
 llgo
 llm
@@ -2268,13 +2274,14 @@ php-cs-fixer
 php@8.1
 php@8.2
 php@8.3
-phpmd
 phpmyadmin
 phpunit
 phylum-cli
 pianod
 picard-tools
+picotool
 pidgin
+pie
 pig
 pillow
 pinentry
@@ -2324,13 +2331,13 @@ popeye
 portablegl
 porter
 postgis
-postgresql@12
 postgresql@13
 postgresql@14
 postgresql@15
 postgresql@16
 postgrest
 poutine
+powerline-go
 powerman
 powerman-dockerize
 pqiv
@@ -2390,7 +2397,6 @@ pycodestyle
 pycparser
 pyenv
 pyenv-virtualenv
-pyflow
 pygit2
 pygments
 pygobject3
@@ -2478,8 +2484,10 @@ recc
 recode
 recoverpy
 redict
+redka
 redress
 redwax-tool
+regal
 regclient
 regina-rexx
 regipy
@@ -2532,6 +2540,7 @@ rpmspectool
 rqlite
 rrdtool
 rsgain
+rshijack
 rswift
 rsyncy
 rsyslog
@@ -2595,6 +2604,7 @@ scipy
 scm-manager
 scnlib
 scons
+scooter
 scorecard
 scotch
 scrapy
@@ -2624,6 +2634,7 @@ serialosc
 serpl
 serverless
 service-weaver
+sesh
 sf
 sfcgal
 sfml
@@ -2945,6 +2956,7 @@ toml11
 toot
 topfew
 topgrade
+topiary
 tor
 tox
 toxcore
