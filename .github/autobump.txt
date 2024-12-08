@@ -73,6 +73,7 @@ apache-flink
 apache-flink-cdc
 apache-geode
 apache-opennlp
+apache-pulsar
 apache-spark
 apachetop
 apibuilder-cli
@@ -1022,6 +1023,7 @@ fwup
 fwupd
 fx
 fzf
+fzf-make
 g-ls
 gabo
 gallery-dl
@@ -2676,6 +2678,7 @@ selenium-server
 semgrep
 sentencepiece
 seqkit
+sequin
 sequoia-sq
 ser2net
 serialosc
