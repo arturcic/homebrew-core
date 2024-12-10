@@ -73,6 +73,7 @@ apache-flink
 apache-flink-cdc
 apache-geode
 apache-opennlp
+apache-pulsar
 apache-spark
 apachetop
 apibuilder-cli
@@ -343,6 +344,7 @@ camlp5
 canfigger
 capnp
 capstone
+carapace
 cargo-about
 cargo-audit
 cargo-auditable
@@ -737,6 +739,7 @@ dooit
 doppler
 dosbox-staging
 dosbox-x
+dotbot
 dotenv-linter
 dotnet
 dotslash
@@ -1022,6 +1025,7 @@ fwup
 fwupd
 fx
 fzf
+fzf-make
 g-ls
 gabo
 gallery-dl
@@ -1637,6 +1641,7 @@ libfs
 libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
+libgedit-tepl
 libgeotiff
 libgetdata
 libgit2
@@ -1673,6 +1678,7 @@ libmicrohttpd
 libmobi
 libmodbus
 libmonome
+libmsquic
 libmtp
 libmxml
 libnetfilter_conntrack
@@ -1867,12 +1873,14 @@ mariadb@10.5
 mariadb@10.6
 mariadb@11.2
 mariadb@11.4
+markdown-oxide
 markdownlint-cli
 markdownlint-cli2
 marked
 marksman
 marp-cli
 massdriver
+massren
 matplotplusplus
 matterbridge
 maturin
@@ -1912,6 +1920,7 @@ metabase
 metals
 metricbeat
 mfem
+mgba
 micro
 micromamba
 micronaut
@@ -2513,6 +2522,7 @@ rancher-cli
 ranger
 rapidfuzz-cpp
 ratchet
+ratfor
 rattler-build
 rav1e
 raven
@@ -2676,6 +2686,7 @@ selenium-server
 semgrep
 sentencepiece
 seqkit
+sequin
 sequoia-sq
 ser2net
 serialosc
@@ -2849,6 +2860,7 @@ stow
 stp
 strace
 streamlink
+streamvbyte
 stress-ng
 stripe-cli
 stripe-mock
@@ -2902,6 +2914,7 @@ talisman
 tanka
 taplo
 tarantool
+tarlz
 tartufo
 task
 taskopen
