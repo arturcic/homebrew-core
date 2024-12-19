@@ -1,17 +1,17 @@
 class Asyncapi < Formula
   desc "All in one CLI for all AsyncAPI tools"
   homepage "https://github.com/asyncapi/cli"
-  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-2.12.0.tgz"
-  sha256 "b46d4159df43e630903d8d58986234b3db07f1484fd14f9ae36f46c2ecf48072"
+  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-2.13.0.tgz"
+  sha256 "e48650795df5d4475706c1e257dec64465c7f5e63693b25ce1d67d56cb65fdc4"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "04f4deb8fbe3479374e0653b043694de43caf7e6a0a50fcc605b21e0b91e5c7a"
-    sha256 cellar: :any,                 arm64_sonoma:  "04f4deb8fbe3479374e0653b043694de43caf7e6a0a50fcc605b21e0b91e5c7a"
-    sha256 cellar: :any,                 arm64_ventura: "04f4deb8fbe3479374e0653b043694de43caf7e6a0a50fcc605b21e0b91e5c7a"
-    sha256 cellar: :any,                 sonoma:        "449b94bb120f749ce5e3076dceb632d59693bba64d90c5260f379f441b664340"
-    sha256 cellar: :any,                 ventura:       "449b94bb120f749ce5e3076dceb632d59693bba64d90c5260f379f441b664340"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f21c2b05cb0989afd990aef1c56c5665b8692948f91934e89ad52c9562431dfb"
+    sha256 cellar: :any,                 arm64_sequoia: "a4bb570f584d5edde6782e9b45bd1c1ec5ce591ad661300792757e911be20a89"
+    sha256 cellar: :any,                 arm64_sonoma:  "a4bb570f584d5edde6782e9b45bd1c1ec5ce591ad661300792757e911be20a89"
+    sha256 cellar: :any,                 arm64_ventura: "a4bb570f584d5edde6782e9b45bd1c1ec5ce591ad661300792757e911be20a89"
+    sha256 cellar: :any,                 sonoma:        "c852ffb0fc1927f59f574b0eb712f26fcda73b563088ffd131f5b6942c55b76e"
+    sha256 cellar: :any,                 ventura:       "c852ffb0fc1927f59f574b0eb712f26fcda73b563088ffd131f5b6942c55b76e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "70b5e8d2d9c4c1e3bbfc4a5e16afc966445139387b8d801f8f7644e68abd31f3"
   end
 
   depends_on "node"
@@ -19,9 +19,6 @@ class Asyncapi < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
-
-    # Replace universal binaries with their native slices
-    deuniversalize_machos
   end
 
   test do
