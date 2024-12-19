@@ -1,19 +1,19 @@
 class Trufflehog < Formula
   desc "Find and verify credentials"
   homepage "https://trufflesecurity.com/"
-  url "https://github.com/trufflesecurity/trufflehog/archive/refs/tags/v3.85.0.tar.gz"
-  sha256 "6c1c18e24d9497b6e34353746947613e86324cdbcc36d685be8bf9627ae8f054"
+  url "https://github.com/trufflesecurity/trufflehog/archive/refs/tags/v3.87.2.tar.gz"
+  sha256 "830b6282b39a1f0e296d4ca818900ac4eb49ca868abbdc444841c24e525b2f42"
   # upstream license ask, https://github.com/trufflesecurity/trufflehog/issues/1446
   license "AGPL-3.0-only"
   head "https://github.com/trufflesecurity/trufflehog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "23d27d15f7310378f32c1c1819fd6f021c3f6b54bdfb127665a619e8ca55b9d6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fd2a61fe35924708f48d33ca67c384e2a490e34faebc8f9714ca24e22c767e4e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "fb723ef3c2b7ffc3c039e63d8eee4e02bb835704603a252a00640e5a18523745"
-    sha256 cellar: :any_skip_relocation, sonoma:        "95dfc5695e548203f1ef1dc31e1bbb6ffd9801e96f79b12ef0f62dde27a9db16"
-    sha256 cellar: :any_skip_relocation, ventura:       "4e3f97b44df2623fbf244e873beeeeff154e80108852d75f07404f891715cf3d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0159092253eb4bc8007b7b3af58577481df5d28777b23f67567d79029105d6b2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "97295f89683c31bea46a8612dd7daedd1c7bddba0512cf5caeafbd2a9e975202"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7242071c810e1f3ec3b6987da42fae3e7f94c47dc3587201a9216caf110d9e6d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a6aca4a5fef8ad09300570a1c6ca8b4f30a1bdc6854790eb0cb64c539670cc10"
+    sha256 cellar: :any_skip_relocation, sonoma:        "285411b93d1c28c7b54cd3072abf5c4addb2b628245f5bf1b6c94eb5f6d2b888"
+    sha256 cellar: :any_skip_relocation, ventura:       "f89f88c3dd191596e1d6b0bd6bcdaa7f0dbf2b8d14bef300d0644328f7ffac3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "324a9273d1a84549038415905a5472eb5513fba9695ed66636a77a30793fc777"
   end
 
   depends_on "go" => :build

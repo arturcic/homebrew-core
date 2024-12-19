@@ -3,17 +3,17 @@ class Localai < Formula
 
   desc "OpenAI alternative"
   homepage "https://localai.io"
-  url "https://github.com/mudler/LocalAI/archive/refs/tags/v2.24.0.tar.gz"
-  sha256 "cdb23d725937c1e836a11b98761abc10cc28dc1e3c7ccc1d0c7c719dad3b7097"
+  url "https://github.com/mudler/LocalAI/archive/refs/tags/v2.24.2.tar.gz"
+  sha256 "6dd03d21c4c903890bd2bdc6c18b4a1191b1a79dc296ccbf817d773cdcdb401a"
   license "MIT"
 
   bottle do
-    sha256 arm64_sequoia: "bc9c2465d7d3ba3db032c726ba11212a8d4900672f5fda0cd26408020356dfdb"
-    sha256 arm64_sonoma:  "6f74c163eed4cb1cd441ec23e2e9567d82745973d8772ac7b68ccdf3966bee58"
-    sha256 arm64_ventura: "7681066e72cda6c42cb502840d0a657a19e77e2d9110696855a105a6b651ce9f"
-    sha256 sonoma:        "253cb8990a2d020ab3a3767dfd4a5fe716be6a2eb4c4cfa65c61edcd33326c18"
-    sha256 ventura:       "fd26ce3dc9b5895c85c1e5c1438a3a147f55acc6a7c7ce9dcb9b2912b2899b3b"
-    sha256 x86_64_linux:  "75993324ed02c9ae2808371c5243e5c1088a763dfc261529e8771964ccd7f4da"
+    sha256 arm64_sequoia: "99415822dc2eea2d5b91b2782ba25ed0fe40fa35d1207418c64806f282e9f27f"
+    sha256 arm64_sonoma:  "342425c0a68851e8591a2577abc459bdfbe675863c568e4333c0b3a1e1cc4408"
+    sha256 arm64_ventura: "9c5e4bef1477bcb92388ba94a06c298ddb7157e9947d97df88bfb635298e4398"
+    sha256 sonoma:        "860eed1a69867f545fcc78d14cfe1d70f4a6c809cbe114f3504cf54a3155c672"
+    sha256 ventura:       "d458baf4fb2261a0727bcf5de266b82ead7269a7297a6e2f0956c3f3660228ae"
+    sha256 x86_64_linux:  "b27ae91f9e9f7a46cee70e912ea4d375bf93e60af046a5d22b08fe2ee21ac50e"
   end
 
   depends_on "abseil" => :build

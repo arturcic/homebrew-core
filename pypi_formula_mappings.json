@@ -112,9 +112,6 @@
   "beancount": {
     "exclude_packages": ["certifi"]
   },
-  "beautysh": {
-    "extra_packages": ["setuptools"]
-  },
   "bilix": {
     "exclude_packages": ["certifi"]
   },
@@ -283,7 +280,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "duplicity": {
-    "exclude_packages": ["certifi", "cryptography"],
+    "exclude_packages": ["certifi"],
     "extra_packages": ["python-novaclient>18", "stone==3.2.1"]
   },
   "dvc": {
@@ -371,7 +368,7 @@
   },
   "gnuradio": {
     "extra_packages": [
-      "click", "click-plugins", "jsonschema", "lxml", "mako",
+      "click", "jsonschema", "lxml", "mako",
       "packaging", "pygccxml", "pyyaml", "setuptools"
     ]
   },
@@ -405,6 +402,9 @@
   "grokmirror": {
     "exclude_packages": ["certifi"]
   },
+  "gsan": {
+    "exclude_packages": ["cryptography"]
+  },
   "gyb": {
     "package_name": "",
     "exclude_packages": ["certifi"],
@@ -413,7 +413,7 @@
     ]
   },
   "harlequin": {
-    "package_name": "harlequin[mysql,postgres]",
+    "package_name": "harlequin[mysql,odbc,postgres]",
     "exclude_packages": ["psycopg-binary", "tree-sitter-languages"],
     "extra_packages": ["psycopg-c"]
   },
@@ -839,6 +839,9 @@
     "exclude_packages": ["pygit2"]
   },
   "theharvester": {
+    "exclude_packages": ["certifi"]
+  },
+  "tmt": {
     "exclude_packages": ["certifi"]
   },
   "toot": {
