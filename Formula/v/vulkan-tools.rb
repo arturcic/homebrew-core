@@ -1,8 +1,8 @@
 class VulkanTools < Formula
   desc "Vulkan utilities and tools"
   homepage "https://github.com/KhronosGroup/Vulkan-Tools"
-  url "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.3.302.tar.gz"
-  sha256 "75264092f597e883c236345f188d4f09b635891fba53b517d9953aff8ada6571"
+  url "https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.4.304.tar.gz"
+  sha256 "fa17870f531affec06dfd5cab8121cb6e54777f779dab59fccafeb136fe43e19"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Tools.git", branch: "main"
 
@@ -12,12 +12,12 @@ class VulkanTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b348c72d5b5ac361ef903fc83b9156ccce9df927457da1c00d33c9086f5d5292"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "44c779a0eb19bd51b917abd1a2dc5418b9e07b07f8319fbb6466acdfd0884826"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "91784400f15f6c9ca45280f60da97573ab874aea0debdcffc6783046f0264866"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1a89bf06faee102a17194050d732b50ca86f61683c7ab0a16d920293bf4b5fd6"
-    sha256 cellar: :any_skip_relocation, ventura:       "592bb2fc1935053b72b8fd1f84c9f9b7193fcbffde05e1cb460b8976f5fc85d1"
-    sha256                               x86_64_linux:  "20b0f96fb2b2fab3de6b60bf21a2bf8d614b115f86ab952149ed537d892dabf0"
+    sha256 cellar: :any, arm64_sequoia: "00209f402d6a016da15c9f85610fcc37527992a134662c85f5215e7c883783c9"
+    sha256 cellar: :any, arm64_sonoma:  "c60ec0981eee8817b18e516806be7df430252cd75a28854de9f708a04bf260a5"
+    sha256 cellar: :any, arm64_ventura: "481a9305ecf5cabf84db42bdc75f1f28d897b7c852b019fd0ac730d95ab980db"
+    sha256 cellar: :any, sonoma:        "7ba08a4994c11775a71f20f6a8aeb909b22332f09714c1d4e7e9eef64bd44bad"
+    sha256 cellar: :any, ventura:       "6e245b47c855b1528e9972290173c9a23974fc49b415ea7e8c0585b022a29498"
+    sha256               x86_64_linux:  "a0a143db6502b936a5b1bfbcefe272a167dd221a928597697badd73baabf7a47"
   end
 
   depends_on "cmake" => :build
@@ -48,8 +48,6 @@ class VulkanTools < Formula
                 "${MOLTENVK_DIR}/MoltenVK/icd/MoltenVK_icd.json",
                 "${MOLTENVK_DIR}/share/vulkan/icd.d/MoltenVK_icd.json"
       inreplace buildpath.glob("*/macOS/*/CMakeLists.txt") do |s|
-        s.gsub! "${MOLTENVK_DIR}/MoltenVK/include",
-                "${MOLTENVK_DIR}/include"
         s.gsub! "${MOLTENVK_DIR}/Package/Release/MoltenVK/dynamic/dylib/macOS/libMoltenVK.dylib",
                 "${MOLTENVK_DIR}/lib/libMoltenVK.dylib"
       end
