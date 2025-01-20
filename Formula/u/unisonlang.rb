@@ -11,6 +11,10 @@ class Unisonlang < Formula
     resource "local-ui" do
       url "https://github.com/unisonweb/unison-local-ui/archive/refs/tags/release/0.5.32.tar.gz"
       sha256 "69ed790cba455677e864467446791650271cf163fd7a2246e4c45eddb317dd13"
+
+      livecheck do
+        formula :parent
+      end
     end
   end
 
@@ -39,7 +43,7 @@ class Unisonlang < Formula
   depends_on "elm" => :build
   depends_on "ghc@9.6" => :build
   depends_on "haskell-stack" => :build
-  depends_on "node@20" => :build
+  depends_on "node" => :build
 
   uses_from_macos "python" => :build
   uses_from_macos "xz" => :build

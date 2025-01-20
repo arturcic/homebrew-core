@@ -115,6 +115,7 @@ asak
 ascii
 asciidoctor
 asciidoctorj
+asciigen
 asdf
 asio
 ask-cli
@@ -283,6 +284,7 @@ bluez
 bmake
 bnd
 bob
+bold
 bomber
 bore-cli
 borgbackup
@@ -365,12 +367,14 @@ cargo-bundle
 cargo-c
 cargo-chef
 cargo-crev
+cargo-cyclonedx
 cargo-deny
 cargo-depgraph
 cargo-dist
 cargo-expand
 cargo-flamegraph
 cargo-generate
+cargo-hack
 cargo-instruments
 cargo-llvm-cov
 cargo-llvm-lines
@@ -383,6 +387,7 @@ cargo-release
 cargo-run-bin
 cargo-shuttle
 cargo-udeps
+cargo-update
 cargo-watch
 cargo-zigbuild
 cariddi
@@ -544,6 +549,7 @@ code-minimap
 code-server
 codeberg-cli
 codec2
+codecov-cli
 codelimit
 coder
 codesnap
@@ -712,6 +718,7 @@ dhall
 dhall-bash
 dhall-json
 dhall-lsp-server
+dhall-toml
 dhall-yaml
 di
 dialog
@@ -1156,6 +1163,7 @@ gittuf
 gitu
 giza
 gjs
+gkrellm
 glances
 glassfish
 glasskube
@@ -1200,6 +1208,7 @@ goaccess
 goawk
 gobject-introspection
 gocloc
+gocryptfs
 goctl
 godap
 goffice
@@ -1296,10 +1305,12 @@ gtksourceview5
 gtranslator
 gucharmap
 guile
+guile-fibers
 gulp-cli
 gum
 gumbo-parser
 gupnp
+gupnp-av
 gupnp-tools
 gurk
 gwt
@@ -1323,6 +1334,7 @@ haskell-stack
 hatari
 hatch
 havn
+hawkeye
 haxe
 hbase
 hblock
@@ -1340,6 +1352,7 @@ helmfile
 helmify
 helmsman
 hermit
+hevi
 hexo
 hexyl
 hfstospell
@@ -1360,6 +1373,7 @@ hoverfly
 howard-hinnant-date
 hpack
 hsd
+html2markdown
 htmldoc
 htmlq
 htmltest
@@ -1410,6 +1424,7 @@ immich-cli
 immortal
 immudb
 imposm3
+inchi
 include-what-you-use
 influxdb
 influxdb-cli
@@ -1502,6 +1517,7 @@ jrnl
 jruby
 jscpd
 jsdoc3
+jsign
 json-fortran
 json-glib
 json2ts
@@ -1543,6 +1559,8 @@ kcgi
 kcov
 kcptun
 kea
+keep-sorted
+keploy
 kepubify
 kerl
 kew
@@ -1602,6 +1620,7 @@ kubergrunt
 kubernetes-cli
 kubernetes-cli@1.29
 kubernetes-cli@1.30
+kubernetes-cli@1.31
 kubescape
 kubeseal
 kubeshark
@@ -1683,6 +1702,7 @@ libcdr
 libchewing
 libclc
 libcoap
+libcotp
 libcouchbase
 libcpuid
 libcss
@@ -1700,6 +1720,7 @@ libepoxy
 libesedb
 libetonyek
 libewf
+libexif
 libfabric
 libffcall
 libffi
@@ -1712,6 +1733,7 @@ libgedit-amtk
 libgedit-gfls
 libgedit-gtksourceview
 libgedit-tepl
+libgee
 libgeotiff
 libgetdata
 libgit2
@@ -1877,6 +1899,7 @@ lightgbm
 lighthouse
 lightning
 lighttpd
+lilv
 lima
 limbo
 link-grammar
@@ -2047,6 +2070,7 @@ minimal-racket
 minio-warp
 minipro
 miniserve
+minisign
 miniupnpc
 minizinc
 minizip
@@ -2297,6 +2321,7 @@ opencl-clhpp-headers
 opencl-headers
 opencl-icd-loader
 opencolorio
+opencsg
 opendetex
 opendht
 openexr
@@ -2352,6 +2377,7 @@ orgalorg
 orientdb
 ormolu
 orocos-kdl
+ory-hydra
 osc
 osctrl-cli
 osi
@@ -2426,8 +2452,10 @@ pedump
 pegtl
 percona-toolkit
 percona-xtrabackup
+percona-xtrabackup@8.0
 periscope
 perl
+perl-dbd-mysql
 perltidy
 peru
 pferd
@@ -2482,6 +2510,7 @@ pjproject
 pkg-config-wrapper
 pkgconf
 pkgdiff
+pkgx
 pkl
 plantuml
 planus
@@ -2496,6 +2525,7 @@ pnetcdf
 pngquant
 pnpm
 pnpm@8
+pnpm@9
 po4a
 pocketbase
 pocl
@@ -2538,6 +2568,8 @@ prettierd
 primecount
 primesieve
 principalmapper
+prism-cli
+privoxy
 probe-rs-tools
 procps
 procs
@@ -2759,6 +2791,7 @@ rubberband
 ruby
 ruby@3.1
 ruby@3.2
+ruby@3.3
 ruff
 ruff-lsp
 rune
@@ -2829,6 +2862,7 @@ scw
 sdb
 sdl2
 sdl2_image
+sdl2_sound
 sdl2_ttf
 seal
 seam
@@ -2852,6 +2886,7 @@ serie
 serpl
 service-weaver
 sesh
+sextractor
 sf
 sfcgal
 sfml
@@ -2867,6 +2902,7 @@ shell2http
 shellcheck
 shellharden
 shellz
+shepherd
 sherlock
 shfmt
 showcert
@@ -2938,6 +2974,7 @@ soapyremote
 socat
 socket_vmnet
 solana
+solargraph
 solhint
 sollya
 solr
@@ -2950,6 +2987,7 @@ sonobuoy
 sophus
 soplex
 sops
+sord
 sound-touch
 source-to-image
 sourcekitten
@@ -2987,6 +3025,7 @@ squashfuse
 squealer
 squid
 squiid
+sratom
 sratoolkit
 src
 srgn
@@ -3041,6 +3080,7 @@ subversion
 suite-sparse
 sundials
 superfile
+superhtml
 superlu
 surfer
 suricata
@@ -3248,6 +3288,7 @@ typos-lsp
 typst
 typstyle
 tz
+tzdb
 tzdiff
 u-boot-tools
 uade
@@ -3526,6 +3567,7 @@ zig
 zigmod
 zim
 zipkin
+zix
 zizmor
 zk
 zlib
