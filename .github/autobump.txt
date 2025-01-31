@@ -5,6 +5,7 @@ abseil
 abyss
 ack
 acl2
+acme.sh
 acronym
 act
 action-validator
@@ -16,6 +17,7 @@ adios2
 adns
 adr-viewer
 adwaita-icon-theme
+aerc
 aerleon
 aespipe
 afflib
@@ -375,6 +377,7 @@ cargo-cyclonedx
 cargo-deny
 cargo-depgraph
 cargo-dist
+cargo-edit
 cargo-expand
 cargo-flamegraph
 cargo-generate
@@ -468,6 +471,7 @@ chezmoi
 chezscheme
 chibi-scheme
 chicken
+chiko
 chisel-tunnel
 chkbit
 chkrootkit
@@ -943,6 +947,7 @@ fantom
 fanyi
 fast_float
 fastapi
+fastd
 fastfec
 fastfetch
 fastlane
@@ -1040,6 +1045,7 @@ fossil
 fourmolu
 fourstore
 fox
+fpart
 fping
 fplll
 fq
@@ -1193,6 +1199,7 @@ gnu-apl
 gnu-getopt
 gnu-typist
 gnu-units
+gnu-which
 gnumeric
 gnunet
 gnupg
@@ -1468,6 +1475,7 @@ iredis
 isa-l
 isl
 iso-codes
+isort
 ispc
 istioctl
 isync
@@ -1799,6 +1807,7 @@ libp11
 libpaho-mqtt
 libpanel
 libpano
+libpaper
 libpcap
 libpeas
 libphonenumber
@@ -1825,6 +1834,7 @@ librtlsdr
 libsail
 libsais
 libscfg
+libseccomp
 libsecret
 libserialport
 libshumate
@@ -1849,6 +1859,7 @@ libtirpc
 libtommath
 libtool
 libtorrent-rakshasa
+libtorrent-rasterbar
 libtrace
 libtrng
 libucl
@@ -1903,6 +1914,7 @@ libzzip
 license-eye
 licensed
 licensefinder
+licenseplist
 lightgbm
 lighthouse
 lightning
@@ -1925,6 +1937,7 @@ litmusctl
 little-cms2
 livekit
 livekit-cli
+lizard
 lla
 llama.cpp
 lldpd
@@ -1954,6 +1967,7 @@ luajit-openresty
 luarocks
 luau
 lucky-commit
+ludusavi
 luit
 lune
 lunzip
@@ -2029,6 +2043,7 @@ mdbook
 mdbtools
 mdcat
 mdds
+mdformat
 mdless
 mdsh
 mdz
@@ -2062,6 +2077,7 @@ micronaut
 microplane
 micropython
 microsocks
+midnight-commander
 mighttpd2
 mihomo
 mikmod
@@ -2200,6 +2216,7 @@ neon
 neonctl
 neosync
 neovide
+neovim-qt
 nerdctl
 nerdfetch
 nerdfix
@@ -2572,6 +2589,7 @@ powerman
 powerman-dockerize
 pqiv
 pre-commit
+precious
 presenterm
 prestd
 prestodb
@@ -2741,6 +2759,7 @@ rekor-cli
 release-it
 remarshal
 remind
+render
 renovate
 replxx
 repo
@@ -2794,6 +2813,7 @@ rqlite
 rrdtool
 rsgain
 rshijack
+rsnapshot
 rswift
 rsync
 rsyncy
@@ -2844,6 +2864,7 @@ scala
 scala@2.12
 scala@2.13
 scala@3.3
+scalapack
 scalingo
 scamper
 scarb
@@ -2873,6 +2894,7 @@ scummvm
 scummvm-tools
 scw
 sdb
+sdcc
 sdl2
 sdl2_image
 sdl2_sound
@@ -2931,6 +2953,7 @@ sigma-cli
 signal-cli
 signmykey
 sigstore
+sigsum-go
 sile
 silicon
 silk
@@ -2976,6 +2999,7 @@ snakeviz
 snap
 snapcast
 snapcraft
+snapraid
 sng
 sngrep
 sniffer
@@ -3006,6 +3030,7 @@ sound-touch
 source-to-image
 sourcekitten
 sourcery
+spacer
 spack
 spades
 spatialindex
@@ -3016,6 +3041,7 @@ sphinx-doc
 spicetify-cli
 spidermonkey
 spidermonkey@115
+spiped
 spirv-llvm-translator
 sponge
 spoofdpi
@@ -3181,6 +3207,7 @@ termbg
 terminator
 termscp
 terracognita
+terraform-cleaner
 terraform-inventory
 terraform-local
 terraform-ls
@@ -3203,9 +3230,11 @@ texlab
 texmath
 texttest
 tf-profile
+tf-summarize
 tfautomv
 tfel
 tfmigrate
+tfprovidercheck
 tfproviderlint
 tfschema
 tfsec
@@ -3308,11 +3337,13 @@ tzdb
 tzdiff
 u-boot-tools
 uade
+ubi
 ucloud
 uffizzi
 uftrace
 ugit
 ugrep
+uhd
 unar
 unbound
 uncover
@@ -3385,6 +3416,7 @@ victorialogs
 victoriametrics
 viddy
 video-compare
+vile
 vim
 vineyard
 vips
@@ -3416,6 +3448,7 @@ vte3
 vtk
 vue-language-server
 vulkan-extensionlayer
+vulkan-profiles
 vulkan-validationlayers
 vulkan-volk
 vulsio-gost

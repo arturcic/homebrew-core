@@ -1,17 +1,17 @@
 class Rollup < Formula
   desc "Next-generation ES module bundler"
   homepage "https://rollupjs.org/"
-  url "https://registry.npmjs.org/rollup/-/rollup-4.31.0.tgz"
-  sha256 "015eab25fa9bf3ea74597e2dcf4093ad3369e5600caa4aeda648e9eaa4f99933"
+  url "https://registry.npmjs.org/rollup/-/rollup-4.32.1.tgz"
+  sha256 "8d7a7e702d6859c7c839e08a464ebba7b4af8543631c9a87b066ac4fb8beeb42"
   license all_of: ["ISC", "MIT"]
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "f8e73f8bd4eca680d8d9ddcad1df623ec41d0cf1e3f9f0382855d262e0b491ff"
-    sha256 cellar: :any,                 arm64_sonoma:  "f8e73f8bd4eca680d8d9ddcad1df623ec41d0cf1e3f9f0382855d262e0b491ff"
-    sha256 cellar: :any,                 arm64_ventura: "f8e73f8bd4eca680d8d9ddcad1df623ec41d0cf1e3f9f0382855d262e0b491ff"
-    sha256 cellar: :any,                 sonoma:        "15215913ca06097c6e959cdba1e49e1ed1f49288a7c40553bde0c0b1f86cb840"
-    sha256 cellar: :any,                 ventura:       "15215913ca06097c6e959cdba1e49e1ed1f49288a7c40553bde0c0b1f86cb840"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e228eef1d76bdee56865342e4f98dd7b6e3ea67e2b5b3bd515201b9a48f670aa"
+    sha256 cellar: :any,                 arm64_sequoia: "f39205fc72dca597d246f86a208afe4cbeaabc2fe0c9b964ab37e91329267cb8"
+    sha256 cellar: :any,                 arm64_sonoma:  "f39205fc72dca597d246f86a208afe4cbeaabc2fe0c9b964ab37e91329267cb8"
+    sha256 cellar: :any,                 arm64_ventura: "f39205fc72dca597d246f86a208afe4cbeaabc2fe0c9b964ab37e91329267cb8"
+    sha256 cellar: :any,                 sonoma:        "088855496f688613e1c666b52210ef5f9f1b7a8db39f36d60513f8c6982a32cd"
+    sha256 cellar: :any,                 ventura:       "088855496f688613e1c666b52210ef5f9f1b7a8db39f36d60513f8c6982a32cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7da1f53923d0142dc14100c1fffe9f31f3abd6d2a1ba4b1bd4d66100e560ea4f"
   end
 
   depends_on "node"

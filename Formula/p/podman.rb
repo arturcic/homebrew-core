@@ -1,19 +1,29 @@
 class Podman < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/containers/podman.git",
-      tag:      "v5.3.2",
-      revision: "85043bb1a3818102194afa82845cb63841067c9c"
+  url "https://github.com/containers/podman/archive/refs/tags/v5.3.2.tar.gz"
+  sha256 "e7d7abf2d4ecae7217af017a4199d555563721bf6c3ae52e68704ee8268c432b"
   license all_of: ["Apache-2.0", "GPL-3.0-or-later"]
+  revision 1
   head "https://github.com/containers/podman.git", branch: "main"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created and upstream uses GitHub releases to
+  # indicate when a version is released, so we check the "latest" release
+  # instead of the Git tags. Maintainers confirmed:
+  # https://github.com/Homebrew/homebrew-core/pull/205162#issuecomment-2607793814
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8dd4222f51fb1ddc2378729d0d9ba398cbab3a961a471e5ea4e5ccf36ada3dc6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "89dcd526528e1ac229bb1485536aa346660e8126edc45c81e1e5074e31e45fab"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "60328a1f2ce8bd0bc9454ff13f9093e01ccdaac7d24d4747f7fb2f328ad97a62"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1ca66fa074aaf7f0772830004b6076ae326e727ac6f9ccd73b2714d8525fe579"
-    sha256 cellar: :any_skip_relocation, ventura:       "cbdd3936448de6578ccd9cb8958a2ecdee887602e053d4a0c62a0e71819fc28b"
-    sha256                               x86_64_linux:  "f6d7b93ab8edffb2d26cbb03c641bce3752f9f10a03b55ab40bb298b1fb5f49c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8d3c5a1c99fe2e4309ea96158e12f9132da072786b5cca5d2a6ddeb57a9b49eb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2d54aef6a18d43715e8cc5e1e486cf255e3e5931654e46bf95012a83c7341904"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b2779601ca3ae538593ee8399591f51c625027194d28d2c9768b7831f4b8f261"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2aab6be60b444c3dd2470f3b11a5414bb19901f27b6f49e64716f093801e2a9d"
+    sha256 cellar: :any_skip_relocation, ventura:       "4de740a6f9e3a1d5dd61985d03c6a5e5ba0ac62aee27ab1219f2bb617f831fa5"
+    sha256                               x86_64_linux:  "eb228f53621c5be1b1fcec6efca2b06790cd8f1d5ea602e1b91e33de30d0d4b1"
   end
 
   depends_on "go" => :build
@@ -44,8 +54,8 @@ class Podman < Formula
 
   resource "gvproxy" do
     on_macos do
-      url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.2.tar.gz"
-      sha256 "57bf983cc636d107cd86ecf3a147674cf2f2c18d7a5a92a9b39da842547bbc51"
+      url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.1.tar.gz"
+      sha256 "9b7fb12dfc37b0a727f2209ff8b557c4ec922d11cec30a778c192da360db4a2f"
     end
   end
 

@@ -122,10 +122,6 @@ class Rust < Formula
     end
   end
 
-  def llvm
-    Formula["llvm"]
-  end
-
   def install
     # Ensure that the `openssl` crate picks up the intended library.
     # https://docs.rs/openssl/latest/openssl/#manual
@@ -173,7 +169,7 @@ class Rust < Formula
       --prefix=#{prefix}
       --sysconfdir=#{etc}
       --tools=#{tools.join(",")}
-      --llvm-root=#{llvm.opt_prefix}
+      --llvm-root=#{Formula["llvm"].opt_prefix}
       --enable-llvm-link-shared
       --enable-profiler
       --enable-vendor
@@ -211,25 +207,11 @@ class Rust < Formula
       MachO.codesign!(dylib) if Hardware::CPU.arm?
       chmod 0444, dylib
     end
-    return unless OS.mac?
-
-    # Symlink our LLVM here to make sure the adjacent bin/rust-lld can find it.
-    # Needs to be done in `postinstall` to avoid having `change_dylib_id` done on it.
-    lib.glob("rustlib/*/lib") do |dir|
-      # Use `ln_sf` instead of `install_symlink` to avoid resolving this into a Cellar path.
-      ln_sf llvm.opt_lib/shared_library("libLLVM"), dir
-    end
-  end
-
-  def check_binary_linkage(binary, library)
-    binary.dynamically_linked_libraries.any? do |dll|
-      next false unless dll.start_with?(HOMEBREW_PREFIX.to_s)
-
-      File.realpath(dll) == File.realpath(library)
-    end
   end
 
   test do
+    require "utils/linkage"
+
     system bin/"rustdoc", "-h"
     (testpath/"hello.rs").write <<~RUST
       fn main() {
@@ -266,7 +248,7 @@ class Rust < Formula
     missing_linkage = []
     expected_linkage.each do |binary, dylibs|
       dylibs.each do |dylib|
-        next if check_binary_linkage(binary, dylib)
+        next if Utils.binary_linked_to_library?(binary, dylib)
 
         missing_linkage << "#{binary} => #{dylib}"
       end

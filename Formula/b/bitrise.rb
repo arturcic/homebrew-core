@@ -1,8 +1,8 @@
 class Bitrise < Formula
   desc "Command-line automation tool"
   homepage "https://github.com/bitrise-io/bitrise"
-  url "https://github.com/bitrise-io/bitrise/archive/refs/tags/2.25.2.tar.gz"
-  sha256 "b212652b0350edc16ed525129a0532cc64adc75600fe6cb3bce4dccf509d790e"
+  url "https://github.com/bitrise-io/bitrise/archive/refs/tags/2.27.0.tar.gz"
+  sha256 "2dd64874e60208602b5b78c4bd521926dc476766965cb46d5dc0fbd00ecd0ce9"
   license "MIT"
 
   livecheck do
@@ -11,12 +11,12 @@ class Bitrise < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1f3145d832bbaee63e591bbc67c927a2ede9036f35ef3d3c59f1f7bb565ccb1f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1f3145d832bbaee63e591bbc67c927a2ede9036f35ef3d3c59f1f7bb565ccb1f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1f3145d832bbaee63e591bbc67c927a2ede9036f35ef3d3c59f1f7bb565ccb1f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b9cb230df102487836fdf024f945da0b7e75a3ab2bfa8c579d3a9f26164fd454"
-    sha256 cellar: :any_skip_relocation, ventura:       "b9cb230df102487836fdf024f945da0b7e75a3ab2bfa8c579d3a9f26164fd454"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b6b95bc86ec03a09d639891e7bb431be878c0706651a9e2380be357770484d1c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "166c8dc722a6a385256f923d059dc19ac417c6e14de72cde3b0e65ea7757060f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "166c8dc722a6a385256f923d059dc19ac417c6e14de72cde3b0e65ea7757060f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "166c8dc722a6a385256f923d059dc19ac417c6e14de72cde3b0e65ea7757060f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f3d2c7a0cfa70ce4861972519025c1b7f157c9cccaf3e561a46a4c8e34eb1d56"
+    sha256 cellar: :any_skip_relocation, ventura:       "f3d2c7a0cfa70ce4861972519025c1b7f157c9cccaf3e561a46a4c8e34eb1d56"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a02ea4626d1afea40e3363bc87432a301126235079da383be56010d4fa684bd5"
   end
 
   depends_on "go" => :build

@@ -1,18 +1,18 @@
 class Cdk8s < Formula
   desc "Define k8s native apps and abstractions using object-oriented programming"
   homepage "https://cdk8s.io/"
-  url "https://registry.npmjs.org/cdk8s-cli/-/cdk8s-cli-2.198.301.tgz"
-  sha256 "325a5728c48ec191fadd24309553fbec6ec8484e80c049d47b16595030b15f44"
+  url "https://registry.npmjs.org/cdk8s-cli/-/cdk8s-cli-2.198.310.tgz"
+  sha256 "3250d5fc5fe6dd804cf8259e79f05334836f1f527ad6577e202c115ff328bd84"
   license "Apache-2.0"
   head "https://github.com/cdk8s-team/cdk8s-cli.git", branch: "2.x"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9367bba42a55bea2d6e075e18c7885415f92d182b3e6605f768c669e9ccd9e73"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9367bba42a55bea2d6e075e18c7885415f92d182b3e6605f768c669e9ccd9e73"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "9367bba42a55bea2d6e075e18c7885415f92d182b3e6605f768c669e9ccd9e73"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f427bbac5e08951e98e69ba0ffb3606414b5cb775540fd9cab5a314716e6168c"
-    sha256 cellar: :any_skip_relocation, ventura:       "f427bbac5e08951e98e69ba0ffb3606414b5cb775540fd9cab5a314716e6168c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9367bba42a55bea2d6e075e18c7885415f92d182b3e6605f768c669e9ccd9e73"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "def1a646b208f19c63efebe1051573eceb0d5c5c6304a49976bc288d9b45d835"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "def1a646b208f19c63efebe1051573eceb0d5c5c6304a49976bc288d9b45d835"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "def1a646b208f19c63efebe1051573eceb0d5c5c6304a49976bc288d9b45d835"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7965467e911932be8ebada62c4cdc8e66a2624348ca089c8ddbe6a1b4fcf88a8"
+    sha256 cellar: :any_skip_relocation, ventura:       "7965467e911932be8ebada62c4cdc8e66a2624348ca089c8ddbe6a1b4fcf88a8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "def1a646b208f19c63efebe1051573eceb0d5c5c6304a49976bc288d9b45d835"
   end
 
   depends_on "node"
